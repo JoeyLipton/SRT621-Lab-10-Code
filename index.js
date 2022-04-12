@@ -21,4 +21,5 @@ app.use(express.json());
 
 app.get("/", controller.sendIndex);
 app.get("/home", controller.sendIndex);
-app.get("/books/:bookNumber", controller.sendImage);  
+app.get("/books/:bookNumber", controller.sendImage);
+
