@@ -13,7 +13,7 @@ const MONGO_URI = process.env.MONGO_URI;
 mongoose.connect(
     MONGO_URI,
     { useUnifiedTopology : true })
-    .then((result) => console.log("Server Successfully Launched"))
+    .then((result) => console.log("Server Successfully Launched on localhost:3000"))
     .catch((err) => console.log(err));
 
 app.set("view engine", "ejs");
@@ -30,31 +30,6 @@ app.get("/home", controller.getAllBooks, (req, res, next) => {
 app.get("/", controller.sendIndex);
 app.get("/home", controller.sendIndex);
 app.get("/books/:bookNumber", controller.sendBook);
-
-
-`
-app.get('/all-blogs', (req, res) => {
-    Books.find()
-        .then((result) => {
-            res.send(result);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-})
-`
-
-app.get('/single-blog', (req, res) => {
-    Books.find({
-                bookTitle: "Compilers: Principles, Tools, and Techniques"
-            })
-        .then((result) => {
-            res.send(result)
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-})
 
 app.listen(3000);
 
