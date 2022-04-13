@@ -13,7 +13,7 @@ const MONGO_URI = process.env.MONGO_URI;
 mongoose.connect(
     MONGO_URI,
     { useUnifiedTopology : true })
-    .then((result) => console.log("Server Successfully Launched on localhost:3000"))
+    .then((result) => console.log("Server Successfully Launched on localhost:3000/home"))
     .catch((err) => console.log(err));
 
 app.set("view engine", "ejs");
