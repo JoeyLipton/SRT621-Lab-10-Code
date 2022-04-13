@@ -27,10 +27,9 @@ app.get("/home", controller.getAllBooks, (req, res, next) => {
     )
 })
 
-app.get("/", controller.getAllBooks, (req, res, next) => {
-    res.render("index", { books: req.data }
-    )
-})
+app.get("/", (req, res) => {
+    res.redirect("/home")
+    });
 
 app.get("/books/:bookNumber", controller.sendBook);
 
