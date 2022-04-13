@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JoeyLipton/SRT621-Lab-10-Code#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
     "mongoose": "^6.2.10"
   }
